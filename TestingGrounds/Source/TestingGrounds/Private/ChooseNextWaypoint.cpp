@@ -24,7 +24,6 @@ EBTNodeResult::Type UChooseNextWaypoint::ExecuteTask(UBehaviorTreeComponent& Own
 	auto Index = BlackboardComp->GetValueAsInt(IndexKey.SelectedKeyName);
 	BlackboardComp->SetValueAsObject(WaypointKey.SelectedKeyName, PatrolPoints[Index]);
 
-	// TODO, protect against empty patrol routes
 
 	//increment waypoint
 	auto NextIndex = (Index + 1) % PatrolPoints.Num();
