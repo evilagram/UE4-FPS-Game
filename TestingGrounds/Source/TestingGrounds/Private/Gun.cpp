@@ -43,6 +43,8 @@ void AGun::Tick(float DeltaTime)
 
 void AGun::OnFire()
 {
+	UE_LOG(LogTemp,Warning,TEXT("gun fired"))
+
 	// try and fire a projectile
 	if (ProjectileClass != NULL)
 	{
